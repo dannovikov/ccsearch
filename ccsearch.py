@@ -24,11 +24,11 @@ def getVideoID(link):
 
 def getCC(vid_id):
     try:
-        cc = yt.get_transcript(vid_id, languages=['en'])
-        for dictionary in cc:
+        captions = yt.get_transcript(vid_id, languages=['en'])
+        for dictionary in captions:
             dictionary['text'] = dictionary['text'].lower()
         
-        return cc
+        return captions
     except:
         return [{'text': 'None'}]
         # quit()
@@ -37,13 +37,13 @@ def getCC(vid_id):
 # Get Search Term
 #search_term = input('Please enter your search term: ').lower()
 
-def find(search_term, vid_id, cc):
+def find(search_term, vid_id, captions):
     notFound = True
     with open('templates/results.txt', 'w'):
         pass
 
     with open('templates/results.txt', 'a') as f:
-        for dictionary in cc:
+        for dictionary in captions:
             if dictionary['text'] == 'None':
                 f.write('Unfortunately, there are no captions associated with this video.')
                 notFound = False
