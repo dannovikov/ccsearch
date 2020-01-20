@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Search YouTube Captions!</title>
-  </head>
-  <body>
-      <h1 style="font-family: Helvetica; font-weight:lighter">CCSearch: Search the captions of YouTube videos!</h1>
-      <h3 style="font-family: Helvetica; font-weight:lighter">This service allows you to find clips in YouTube videos by searching their closed-captions.</h3>
-        <form method="POST">
-                <input name="link" placeholder="Enter YouTube Link" size='40'>
-                <br><br>
-                <input name="search_term" placeholder="Enter Search Term" size='40'>
-                <input type="submit">
-        </form>
-  </body>
-</html>
+{% extends "layout.html" %}
+
+{% block body %}
+<h3 style="font-family: Helvetica; font-weight:lighter">This service allows you to find specific moments in YouTube videos by searching their closed-captions.</h3>
+  <form method="POST">
+          <input name="link" placeholder="Enter YouTube Link" size='40'>
+          <br><br>
+          <input name="search_term" placeholder="Enter Search Term" size='40'>
+          <input type="submit">
+  </form>
+{% endblock %}
