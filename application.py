@@ -4,14 +4,10 @@ from ccsearch import getVideoID, getCC, find
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return 'Index Page'
-
-@app.route('/form')
 def hello():
     return render_template('index.html')
 
-@app.route('/form', methods=['POST'])
+@app.route('/', methods=['POST'])
 def my_form_post():
     link = request.form['link']
     search_term = request.form['search_term']
