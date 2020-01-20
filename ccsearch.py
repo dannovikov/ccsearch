@@ -2,11 +2,8 @@ import sys
 from datetime import timedelta
 from youtube_transcript_api import YouTubeTranscriptApi as yt
 
-#Get YT Link
-def getLink(link):
-    return link
 
-#Parse for video ID
+#Parse YouTube link for video ID
 def getVideoID(link):
     if '?t=' in link:
         link = link.split('?')[-2]
@@ -18,7 +15,7 @@ def getVideoID(link):
         link = link[-11:]
     return link
 
-# Get transcript
+
 def getCC(vid_id):
     try:
         captions = yt.get_transcript(vid_id, languages=['en'])
@@ -31,10 +28,6 @@ def getCC(vid_id):
         # quit()
 
 
-# Get Search Term
-#search_term = input('Please enter your search term: ').lower()
-
-#rewrite find method to create a list
 def find(search_term, vid_id, captions):
     notFound = True
     results = []
@@ -50,10 +43,9 @@ def find(search_term, vid_id, captions):
             results.append([dictionary['text'],
                             str(timedelta(seconds=seconds)),
                             f"https://youtu.be/{vid_id}?t={seconds}",])
-        elif notFound:
-            notFound = True
 
     if notFound:
         results.append('NF')
+
 
     return results
