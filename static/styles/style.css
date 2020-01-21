@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66%;
+}
+
+.searchform {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
