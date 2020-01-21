@@ -29,9 +29,10 @@ def getCC(vid_id):
 
 
 def find(search_term, vid_id, captions):
+    terms = search_term.split()
     notFound = True
     results = []
-    for dictionary in captions:
+    for index, dictionary in enumerate(captions):
         if dictionary['text'] == 'None':
             results.append("NC")
 
@@ -43,6 +44,14 @@ def find(search_term, vid_id, captions):
             results.append([dictionary['text'],
                             str(timedelta(seconds=seconds)),
                             f"https://youtu.be/{vid_id}?t={seconds}",])
+        # 
+        # elif terms[0] in dictionary['text'] and terms[1] in captions[index + 1]['text']:
+        #     notFound = False
+        #     seconds = int(dictionary['start'])
+        #     results.append([dictionary['text'] + captions[index+1]['text'],
+        #                     str(timedelta(seconds=seconds)),
+        #                     f"https://youtu.be/{vid_id}?t={seconds}",])
+
 
     if notFound:
         results.append('NF')
