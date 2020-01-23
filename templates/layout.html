@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Search YouTube Captions!</title>
-      <link rel="icon" href="static/images/ccfavicon.png">
-      <link rel="stylesheet" type="text/css" href="static/styles/style.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
-  <body>
-    <img id="logo" src="static/images/logo.png" alt = "CCSearch">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Search YouTube Captions!</title>
+  <script src="static/scripts/script.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" href="static/images/ccfavicon.png">
+  <link rel="stylesheet" type="text/css" href="static/styles/style.css">
+</head>
+
+<body>
+  <header id='topbar'>
+    <form action='/'>
+      <input id="logo" type="image" src="static/images/logo.png" alt="CCSearch">
+    </form>
     <br>
-    <h1 style="font-family: Helvetica; font-weight:lighter">Search the captions of YouTube videos!</h1>
-    <br><br>
-      {% block body %}
-      {% endblock %}
-  </body>
+    <!--
+    <h1 id="logotext" style="font-family: Helvetica; font-weight:lighter">Search the captions of YouTube videos!</h1>
+  -->
+  </header>
+    {% block body %}
+    {% endblock %}
+</body>
+
 </html>
