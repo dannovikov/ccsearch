@@ -12,16 +12,18 @@
 
 <body>
   <header id='topbar'>
-    <form action='/'>
-      <input id="logo" type="image" src="static/images/logo.png" alt="CCSearch">
-    </form>
-    <br>
-    <!--
-    <h1 id="logotext" style="font-family: Helvetica; font-weight:lighter">Search the captions of YouTube videos!</h1>
-  -->
+      <form action='/'>
+        <input id="logo" type="image" src="static/images/logo.png" alt="CCSearch">
+      </form>
+      <br>
+      <!--
+      <h1 id="logotext" style="font-family: Helvetica; font-weight:lighter">Search the captions of YouTube videos!</h1>
+    -->
   </header>
-    {% block body %}
-    {% endblock %}
+  <div class="maindiv">
+      {% block body %}
+      {% endblock %}
+  </div>
 </body>
 
 </html>
