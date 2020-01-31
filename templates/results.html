@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 
+{%block head%}
+<h4 id="resultTitle">Search results for:  "{{search_term}}" </h4>
+{%endblock%}
 {% block body %}
 
   {% for result in results %}
     <div class="result">
-      <h4>{{search_term}} found in: </h4>
-      <p>Text: {{result[0]}}</p>
+      <p>"{{result[0]}}"</p>
       <p>Time stamp: {{result[1]}}</p>
       <a href={{result[2]}} target="_blank">Link to timestamp</a>
       <br><br>

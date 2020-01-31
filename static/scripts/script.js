@@ -2,13 +2,16 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     //document.getElementById("logotext").style.visibility = "hidden";
-    document.getElementById("logo").style.maxWidth = "130px";
-    document.getElementById("topbar").style.height = "50px";
-  } /*else {
-    document.getElementById("logo").style.maxWidth = "400px";
+    //document.getElementById("logo").style.marginLeft = "1vw";
+    //document.getElementById("resultTitle").style.position = "relative";
+    document.getElementById("logo").style.maxWidth = "200px";
+    document.getElementById("topbar").style.bottom = "50px";
+  } else {
+    //document.getElementById("resultTitle").style.position = "initial";
+    document.getElementById("logo").style.maxWidth = "450px";
+    //document.getElementById("logo").style.marginLeft = "auto";
     document.getElementById("topbar").style.height = "100%";
-  //  document.getElementById("logotext").style.visibility = "visible";
-}*/
+  }
 }

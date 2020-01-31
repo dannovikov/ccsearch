@@ -1,12 +1,15 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h3 style="font-family: Helvetica; font-weight:lighter">Find specific moments in YouTube videos by searching for phrases in their closed-captions.</h3>
 
-<div class="searchform">
+<div id="searchform">
+  <h3 style="font-family: Helvetica; font-weight:lighter">Find moments in YouTube videos by searching for phrases in their closed-captions.</h3>
   <form method="POST">
+          <p class="formtext">Which video would you like to search? </p>
           <input name="link" placeholder="Enter YouTube Link" size='40'>
           <br><br>
+
+          <p class = "formtext">Which word or phrase are you looking for?</p>
           <input name="search_term" placeholder="Enter Search Term" size='40'>
           <br><br>
           <input type="submit">
