@@ -1,4 +1,8 @@
 // When the user scrolls down 50px from the top of the document, resize the header
+window.onload = function() {
+  document.getElementById("topbar").style.paddingBottom = "0px";
+}
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

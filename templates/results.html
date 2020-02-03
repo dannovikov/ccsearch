@@ -1,6 +1,13 @@
 {% extends "layout.html" %}
 
-{%block head%}
+{% block script %}
+<script src="static/scripts/script.js"></script>
+{% endblock %}
+
+
+
+
+{%block header%}
 <h4 id="resultTitle">Search results for:  "{{search_term}}" </h4>
 {%endblock%}
 {% block body %}
