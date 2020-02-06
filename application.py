@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from ccsearch import getVideoID, getCC, find
+import sys
 
 app = Flask(__name__)
 
@@ -22,7 +23,9 @@ def my_form_post():
     else:
         return render_template('results.html',
                                 results = results,
-                                search_term = search_term)
+                                search_term = search_term,
+                                link = link)
+
 
 
 #Recieve link through above post method,

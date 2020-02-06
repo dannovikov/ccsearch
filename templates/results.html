@@ -5,13 +5,18 @@
 {% endblock %}
 
 
-
-
 {%block header%}
-<h4 id="resultTitle">Search results for:  "{{search_term}}" </h4>
+<form class="continuesearch" action="/" method="post">
+  <input hidden type='text' name='link' value="{{link}}">
+  <input type="text" name="search_term" size='50' placeholder="{{search_term}}">
+  <input type="submit" value="Search" />
+</form>
 {%endblock%}
 {% block body %}
 
+
+
+<p id="resultTitle">Searching "Title</p>
   {% for result in results %}
     <div class="result">
       <p>"{{result[0]}}"</p>
