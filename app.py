@@ -11,7 +11,7 @@ def hello():
 @app.route('/', methods=['POST'])
 def my_form_post():
     link = request.form['link']
-    search_term = request.form['search_term']
+    search_term = request.form['search_term'].lower()
 
     vid_id = getVideoID(link)
     cc = getCC(vid_id)

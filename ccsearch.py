@@ -29,7 +29,17 @@ def getCC(vid_id):
 
 
 def find(search_term, vid_id, captions):
-    terms = search_term.split()
+    """
+        Precondition: Use getVideoID(link) to obtain the video ID from the
+        YouTube Link, then use getCC(vid_id) to obtain the transcripts.
+
+        Returns a list of lists, one for each line in the transcript that
+        contains the search term. Each list has 3 elements:
+                0. matching line of transcript text
+                1. timestamp of matching line
+                2. link to timestamp
+    """
+    #terms = search_term.split()
     notFound = True
     results = []
     for index, dictionary in enumerate(captions):
@@ -44,7 +54,7 @@ def find(search_term, vid_id, captions):
             results.append([dictionary['text'],
                             str(timedelta(seconds=seconds)),
                             f"https://youtu.be/{vid_id}?t={seconds}",])
-        # 
+        #
         # elif terms[0] in dictionary['text'] and terms[1] in captions[index + 1]['text']:
         #     notFound = False
         #     seconds = int(dictionary['start'])

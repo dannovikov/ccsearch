@@ -11,7 +11,7 @@ def hello():
 @app.route('/', methods=['POST'])
 def my_form_post():
     link = request.form['link']
-    search_term = request.form['search_term']
+    search_term = request.form['search_term'].lower()
 
     vid_id = getVideoID(link)
     cc = getCC(vid_id)
@@ -26,14 +26,3 @@ def my_form_post():
                                 search_term = search_term,
                                 link = link)
 
-
-
-#Recieve link through above post method,
-#If captions:
-#   Return video
-# else:
-    # return sorry
-#Ask for search term
-#If found:
-#   for each found:
-    #'div with found info and link to timestamp
