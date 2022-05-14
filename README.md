@@ -1,4 +1,4 @@
 # ccsearch
 Closed-Captioning Search on YouTube videos powered by Python and hosted with Flask
 
-http://ccsearch.pythonanywhere.com/
+Try it out: http://ccsearch.dantheory.com/
